@@ -1,18 +1,2 @@
-# Derleme çıktıları (En önemlisi)
 /target
-
-# IDE ayarları (VS Code, IntelliJ vb.)
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# İşletim sistemi dosyaları
-.DS_Store
-Thumbs.db
-
-# Cargo tarafından oluşturulan yedekler
-**/*.rs.bk
-
-# Log dosyaları
-*.log
+Cargo.lock
