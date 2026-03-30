@@ -1,6 +1,7 @@
-# miterm-Burak-Ozdemir
-Paralel Tarama (Aynsc Tokio)
 🛡️ SecOps Pentest Suite
+# miterm-Burak-Ozdemir
+
+
 SecOps, Rust ve Tokio runtime kullanılarak geliştirilmiş, yüksek performanslı ve asenkron bir siber güvenlik tarama setidir. Bu araç, modern ağ tarama ihtiyaçlarını karşılamak için minimum kaynak tüketimi ve maksimum hız prensibiyle tasarlanmıştır.
 
 ✨ Özellikler
