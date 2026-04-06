@@ -1,0 +1,9 @@
+# Hedef IP adresi (Örn: 192.168.1.1 veya 127.0.0.1)
+TARGET_IP=127.0.0.1
+
+# Her bir port bağlantısı için zaman aşımı süresi (saniye)
+SCAN_TIMEOUT=1.0
+
+# Tarama yapılacak port aralığı
+START_PORT=1
+END_PORT=1024
