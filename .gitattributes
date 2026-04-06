@@ -1,0 +1,5 @@
+# Varsayılan metin dosyası satır sonu işlemlerini otomatikleştirir
+* text=auto
+
+# Python dosyalarının her zaman diff edilebilir olmasını sağlar
+*.py text diff=python
