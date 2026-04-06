@@ -1,0 +1,2 @@
+docker build -t network-scanner .
+docker run --env-file .env network-scanner
