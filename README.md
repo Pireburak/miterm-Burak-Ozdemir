@@ -1,43 +1,35 @@
-🛡️ SecOps Pentest Suite
-SecOps, Rust ve Tokio runtime kullanılarak geliştirilmiş, yüksek performanslı ve asenkron bir siber güvenlik tarama setidir. Bu araç, modern ağ tarama ihtiyaçlarını karşılamak için minimum kaynak tüketimi ve maksimum hız prensibiyle tasarlanmıştır.
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/tr/b/be/%C4%B0stinye_%C3%9Cniversitesi_logosu.png" alt="İstinye Üniversitesi Logosu" width="200"/>
 
-✨ Özellikler
-⚡ Hızlı Port Tarama: Binlerce portu Semaphore kontrolü ile sistem kaynaklarını yormadan saniyeler içinde tarar.
+  <h1>Gelişmiş Ağ Tarama Aracı (Network Scanner)</h1>
 
-🌐 DNS Keşfi (Subdomain): Wordlist desteğiyle aktif alt alan adlarını asenkron olarak tespit eder.
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
+    <img src="https://img.shields.io/badge/Lisans-MIT-green.svg" alt="License">
+    <img src="https://img.shields.io/badge/Durum-Aktif-success.svg" alt="Build Status">
+  </p>
+</div>
 
-🔒 SSL & HTTP Başlık Analizi: Web sitelerinin güvenlik yapılandırmalarını (HSTS, CSP vb.) denetler ve güvenlik notu (A-F) atar.
+## Proje Hakkında
+Bu proje, yerel veya uzak ağlardaki açık portları ve aktif cihazları tespit etmek amacıyla geliştirilmiş bir ağ tarama (network scanning) aracıdır. Sistem yöneticileri ve güvenlik araştırmacıları için ağ topolojisini anlamak ve potansiyel güvenlik zafiyetlerini (açık portlar üzerinden) analiz etmek için temel bir araç niteliği taşır. 
 
-📁 DirBrute: Web dizinlerini worker-pool mantığıyla kaba kuvvet (brute-force) yöntemiyle haritalandırır.
+**Danışman (Advisor):** [Danışman Eğitmenin Adı Soyadı Buraya Yazılacak] ## İçindekiler - [Proje Hakkında](#proje-hakkında)
+- [Özellikler](#özellikler)
+- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Docker ile Kullanım](#docker-ile-kullanım)
+- [Proje Mimarisi](#proje-mimarisi)
+- [Lisans](#lisans)
 
-🛠️ Kurulum
-Sisteminizde Rust kurulu olmalıdır:
+## Özellikler
+* **Hızlı Port Tarama:** Belirlenen IP adresi veya IP aralığı üzerinde çoklu iş parçacığı (multithreading) kullanarak hızlı tarama.
+* **Banner Grabbing:** Açık portlarda çalışan servislerin versiyon bilgilerini tespit etme.
+* **Kolay Konfigürasyon:** Çevresel değişkenler (`.env`) üzerinden parametrik yapılandırma.
+* **Kapsamlı Raporlama:** Tarama sonuçlarını JSON formatında dışa aktarma yeteneği.
 
-Bash
-git clone https://github.com/KULLANICI_ADIN/pentester.git
-cd pentester
-cargo build --release
-🚀 Kullanım
-Tüm komutlar secops pentest ön ekiyle çalışır:
+## Kurulum ve Çalıştırma
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Port Tarama
-Bash
-cargo run -- pentest scan 127.0.0.1 --range 1-1000
-2. DNS Subdomain Keşfi
-Bash
-cargo run -- pentest dns example.com --wordlist subdomains.txt
-3. HTTP Güvenlik Başlıkları
-Bash
-cargo run -- pentest headers https://target.com --grade
-4. Dizin Tarama
-Bash
-cargo run -- pentest dirbrute https://target.com --wordlist common.txt --threads 20
-🏗️ Mimari Yapı
-Bu proje, asenkron G/Ç (I/O) işlemlerini yönetmek için Tokio kütüphanesini kullanır. Geleneksel tarayıcıların aksine, her bir istek ayrı bir işletim sistemi iş parçacığı (thread) yerine hafif bir Tokio Task olarak çalışır.
-
-Güvenlik: Rust'ın sahiplik (ownership) modeli sayesinde bellek sızıntıları önlenir.
-
-Performans: FuturesUnordered ve Semaphore ile ağ trafiği optimize edilir.
-
-📄 Lisans
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakınız.
+1. Depoyu klonlayın:
+   ```bash
+   git clone [https://github.com/kullaniciadi/ag-taramasi-projesi.git](https://github.com/kullaniciadi/ag-taramasi-projesi.git)
+   cd ag-taramasi-projesi
