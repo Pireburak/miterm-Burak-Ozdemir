@@ -1,0 +1,16 @@
+# Temel Python imajını kullanıyoruz
+FROM python:3.10-slim
+
+# Çalışma dizinini ayarlıyoruz
+WORKDIR /app
+
+# Gerekli dosyaları konteynere kopyalıyoruz
+COPY requirements.txt .
+COPY src/ ./src/
+COPY .env.example .env
+
+# Bağımlılıkları yüklüyoruz (Eğer requirements.txt doluysa)
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# Uygulamayı çalıştırıyoruz
+CMD ["python", "src/network_scanner.py"]
